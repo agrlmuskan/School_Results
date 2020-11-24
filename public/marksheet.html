@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>stfrancishathras</title>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAlsXroDjThMaZG-Ej28YkXM2rdeI7OniY",
+    authDomain: "schoolresults-7.firebaseapp.com",
+    databaseURL: "https://schoolresults-7.firebaseio.com",
+    projectId: "schoolresults-7",
+    storageBucket: "schoolresults-7.appspot.com",
+    messagingSenderId: "1034863490215",
+    appId: "1:1034863490215:web:06446495a8fdd0a91c5782",
+    measurementId: "G-WLW99L710H"
+    };
+    firebase.initializeApp(config);
+  </script>
+      <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="marksheet.css">
+      <script src="/__/firebase/4.0.0/firebase-app.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-auth.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-database.js"></script>
+      <script src="/__/firebase/init.js"></script>
+      <script type="text/javascript" src="marksheet.js"></script>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <div id="headtitle">
+            <h2>ST. Francis Inter college , Hathras Results</h2>
+          </div>
+          <div id="headimg" hidden="true">
+            <img src="user.png" id="userimg">
+          </div>
+        </nav>
+      </header>
+      <center>
+      <div style="width:65vw;border:1px solid black;padding-bottom:5vh;padding-top:5vh;">
+        <font size="6">ST. Francis Inter college , Hathras</font><br><br>
+        <font id="enametxt" size="5">Exam Name</font><br>
+        <table width="85%">
+          <tr><th align="left">Roll No
+          <td id="canroll" align="left">-------
+            <th align="left">Father's Name
+            <td id="canfname" align="left">-----
+          <tr><th align="left">Candidate Name
+          <td align="left"><b id="canname" >-----</b>
+          <th align="left">Date of Birth
+          <td id="candob" align="left">-----
+        </table><br>
+        <table width="85%" border="1" id="restbl" cellpadding="5">
+          <tr>
+            <th>Subject</th>
+            <th>Marks Obtained</th>
+            <th>Total Marks</th>
+            <th>Grade</th>
+          </tr>
+        </table>
+      </div>
+      <button class="mdl-button mdl-js-button mdl-button--raised" type="button" id="backbtn">Search another Roll No.</button>
+      <center>
+  </body>
+</html>

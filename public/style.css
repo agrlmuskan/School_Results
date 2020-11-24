@@ -1,0 +1,22 @@
+header{
+  background-color: #0288D1;
+  height:100px;
+}
+header nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#headtitle{
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+#headimg{
+  margin-right: 20px;
+}
+#userimg{
+  height: 60px;
+  width: 60px;
+}

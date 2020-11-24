@@ -1,0 +1,23 @@
+body{
+  display: flex;
+  flex-direction: column;
+}
+#bpart{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex:1;
+}
+#uploadres{
+  margin-top: 5px;
+  background-color:#AFEEEE;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  width: 40%;
+}
+#menu button{
+  margin-left: 10px;
+}

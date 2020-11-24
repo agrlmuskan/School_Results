@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>stfrancishathras</title>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAlsXroDjThMaZG-Ej28YkXM2rdeI7OniY",
+    authDomain: "schoolresults-7.firebaseapp.com",
+    databaseURL: "https://schoolresults-7.firebaseio.com",
+    projectId: "schoolresults-7",
+    storageBucket: "schoolresults-7.appspot.com",
+    messagingSenderId: "1034863490215",
+    appId: "1:1034863490215:web:06446495a8fdd0a91c5782",
+    measurementId: "G-WLW99L710H"
+    };
+    firebase.initializeApp(config);
+  </script>
+      <!-- Material Design Theming -->
+      <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="main.css">
+      <!-- Import and configure the Firebase SDK -->
+      <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+      <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+      <script src="/__/firebase/4.0.0/firebase-app.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-auth.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-database.js"></script>
+      <script src="/__/firebase/init.js"></script>
+
+      <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+      <!-- Header section containing title -->
+      <header>
+        <nav>
+          <div id="headtitle">
+            <h2>ST. Francis Inter college , Hathras Results</h2>
+          </div>
+          <div id="headimg" hidden="true">
+            <img src="user.png" id="userimg">
+          </div>
+        </nav>
+      </header>
+      
+      <div id="findpage"><center>
+        <main class="mdl-layout__content mdl-color--grey-100">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+            
+            <!-- Container for the demo -->
+            <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+              <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+                <h2 class="mdl-card__title-text">Seach Result by Roll Number</h2>
+              </div>
+              <div id="finddialog" class="mdl-card__supporting-text mdl-color-text--grey-600">
+                <p>Enter your roll number here to get your result</p>
+                <select class="mdl-textfield__input" type="text" id="examtxt" placeholder="Enter you Roll Number here">
+                  <option value="0">Select Exam</option>
+                </select><br><br>
+                <input class="mdl-textfield__input" type="text" id="rolltxt" placeholder="Enter you Roll Number here"/>
+                <br/><br/>
+                <button class="mdl-button mdl-js-button mdl-button--raised" id="searchbtn" name="search">Get Result</button>
+              </div>
+            </div>
+          </div>
+        </main></center>
+      </div>
+      <center><button  class="mdl-button mdl-js-button mdl-button--raised" id="loginbtn">Login</button></center>
+      <br><br>
+      <center>
+        Made with <span id="icon-love" class="et-pb-icon et-waypoint et_pb_animation_top et-animated">❤️</span> by <a href="https://www.linkedin.com/in/muskan-agrawal-425211191" target="_blank">Muskan Agrawal</a>
+    
+        </center>
+    
+  </body>
+</html>

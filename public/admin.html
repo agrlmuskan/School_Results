@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>stfrancishathras</title>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAlsXroDjThMaZG-Ej28YkXM2rdeI7OniY",
+    authDomain: "schoolresults-7.firebaseapp.com",
+    databaseURL: "https://schoolresults-7.firebaseio.com",
+    projectId: "schoolresults-7",
+    storageBucket: "schoolresults-7.appspot.com",
+    messagingSenderId: "1034863490215",
+    appId: "1:1034863490215:web:06446495a8fdd0a91c5782",
+    measurementId: "G-WLW99L710H"
+    };
+    firebase.initializeApp(config);
+  </script>
+      <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+      <link rel="stylesheet" href="main.css">
+      <script src="/__/firebase/4.0.0/firebase-app.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-auth.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-database.js"></script>
+      <script src="/__/firebase/init.js"></script>
+      <script type="text/javascript" src="admin.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="admin.css">
+  </head>
+  <body bgcolor="#ECEFF1">
+    <header>
+      <nav>
+        <div id="headtitle">
+          <h2>ST. Francis Inter college , Hathras Results</h2>
+        </div>
+        <div id="headimg">
+          <img src="user.png" id="userimg">
+        </div>
+      </nav>
+    </header>
+   <center>
+   <div id="menu">
+     <ul class="menu">
+       <li><button class="mdl-button" id="dashbtn">Dashboard</button>
+       <li><button class="mdl-button" id="arebtn">Add Exams</button>
+       <li><button class="mdl-button" id="prbtn">Publish Results</button>
+       <li><button class="mdl-button" id="aucdbtn">Update Class Details</button>
+       <li><button class="mdl-button" id="ausdbtn">Update Student Details</button>
+       <li><button class="mdl-button" id="addtbtn">Add Teachers</button>
+       <li><button class="mdl-button" id="logbtn">Logs</button>
+       <li><button class="mdl-button" id="logoutbtn">Logout</button>
+     </ul>
+   </div>
+   <div id="arecont">
+     <div>
+       <h3>Add Exam</h3>
+       <input class="mdl-textfield__input" type="text" id="ecodetxt" width="auto" placeholder="Exam Code (Year+Month+Week)"><br>
+       <input class="mdl-textfield__input" type="text" id="enametxt" width="auto" placeholder="Exam Name (For Eg. November Week 1st Test Series)"><br>
+       <input type="checkbox" class="clasexam" id="cb9" value="9">Class 9th
+       <input type="checkbox" class="clasexam" id="cb10" value="10">Class 10th
+       <input type="checkbox" class="clasexam" id="cb11" value="11">Class 11th
+       <input type="checkbox" class="clasexam" id="cb12" value="12">Class 12th
+       <br><br>
+       <button class="mdl-button mdl-js-button mdl-button--raised" type="button" id="addbtn">Add Exam</button><br><br>
+       <p id="mes1txt"></p>
+     </div>
+     <div>
+       <h3>Remove Exam</h3>
+       <div id="examlist"></div><br><br>
+       <button class="mdl-button mdl-js-button mdl-button--raised" type="button" id="delbtn">Delete Exams</button><br><br>
+       <p id="mes2txt"></p>
+     </div>
+   </div>
+   <div id="prcont" hidden="true">
+       <h3>Publish Results</h3>
+       <table id="examtbl" border="1" cellpadding="3px">
+         <tr>
+           <th rowspan="2"></th>
+           <th rowspan="2">Exam Code</th>
+           <th rowspan="2">Exam Name</th>
+           <th rowspan="2">Status</th>
+           <th rowspan="2">Appearing Classes</th>
+           <th colspan="3">Science</th>
+           <th rowspan="2">Maths</th>
+           <th rowspan="2">English</th>
+           <th rowspan="2">Computer</th>
+           <th rowspan="2">Physical</th>
+           <th rowspan="2">Hindi</th>
+           <th rowspan="2">Social Science</th>
+         </tr>
+         <tr>
+           <th>Physics</th>
+           <th>Chemistry</th>
+           <th>Biology</th>
+         </tr>
+       </table><br><br>
+       <button class="mdl-button mdl-js-button mdl-button--raised" type="button" id="dopubbtn">Publish Selected Exams</button>
+   </div>
+   <div id="aucdcont" hidden="true">
+       <h3>Add/Update Class Details</h3>
+       <select class="mdl-textfield__input" id="aucdclastxt">
+         <option selected="selected" value="0">Select Class</option>
+         <option value="91">9th Orange</option>
+         <option value="92">9th White</option>
+         <option value="93">9th Green</option>
+         <option value="101">10th Orange</option>
+         <option value="102">10th White</option>
+         <option value="103">10th Green</option>
+         <option value="111">11th Orange</option>
+         <option value="112">11th White</option>
+         <option value="113">11th Green</option>
+         <option value="121">12th Orange</option>
+         <option value="122">12th White</option>
+         <option value="123">12th Green</option>
+       </select><br><br>
+       <input class="mdl-textfield__input" type="text" id="nostxt" placeholder="No. of Students in Class"><br><br>
+       <button class="mdl-button mdl-js-button mdl-button--raised" id="cdupdatebtn" name="start">Add/Update Details</button>
+   </div>
+   <div id="ausdcont" hidden="true">
+     <div>
+       <h3>Add/Update Student Details</h3>
+         <select class="mdl-textfield__input" id="sdclastxt" onchange="loadSDForm()">
+           <option selected="selected" value="0">Select Class</option>
+           <option value="91">9th Orange</option>
+           <option value="92">9th White</option>
+           <option value="93">9th Green</option>
+           <option value="101">10th Orange</option>
+           <option value="102">10th White</option>
+           <option value="103">10th Green</option>
+           <option value="111">11th Orange</option>
+           <option value="112">11th White</option>
+           <option value="113">11th Green</option>
+           <option value="121">12th Orange</option>
+           <option value="122">12th White</option>
+           <option value="123">12th Green</option>
+         </select><br><br>
+         <div id="entryfields"></div>
+         <br><br>
+         <button class="mdl-button mdl-js-button mdl-button--raised" id="sdupdatebtn">Add/Update Details</button>
+     </div>
+   </div>
+   <div id="addtcont" hidden="true">
+     <h3>Add Teacher</h3>
+     <input class="mdl-textfield__input" type="text" id="emailtxt" placeholder="Email of Teacher"><br>
+     <input class="mdl-textfield__input" type="text" id="pswdtxt" placeholder="Password for Teacher's Account"><br>
+     <button class="mdl-button mdl-js-button mdl-button--raised" type="button" id="ctabtn">Create Account</button>
+   </div>
+   <div id="logcont" hidden="true">
+     <table id="logtbl">
+       <tr>
+         <th>Date and Time</th>
+         <th>Log</th>
+       </tr>
+     </table>
+   </div>
+   </center>
+   <div id="modal"><!-- Place at bottom of page --></div>
+  </body>
+</html>

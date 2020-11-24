@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>stfrancishathras</title>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAlsXroDjThMaZG-Ej28YkXM2rdeI7OniY",
+    authDomain: "schoolresults-7.firebaseapp.com",
+    databaseURL: "https://schoolresults-7.firebaseio.com",
+    projectId: "schoolresults-7",
+    storageBucket: "schoolresults-7.appspot.com",
+    messagingSenderId: "1034863490215",
+    appId: "1:1034863490215:web:06446495a8fdd0a91c5782",
+    measurementId: "G-WLW99L710H"
+    };
+    firebase.initializeApp(config);
+  </script>
+      <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+      <link rel="stylesheet" href="main.css">
+      <script src="/__/firebase/4.0.0/firebase-app.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-auth.js"></script>
+      <script src="/__/firebase/4.0.0/firebase-database.js"></script>
+      <script src="/__/firebase/init.js"></script>
+      <script type="text/javascript" src="dashboard.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="headtitle">
+          <h2>ST. Francis Inter college , Hathras Results</h2>
+        </div>
+        <div id="headimg">
+          <img src="user.png" id="userimg">
+        </div>
+      </nav>
+    </header>
+    <div id="bpart">
+      <div id="menu">
+        <button class="mdl-button mdl-js-button mdl-button--raised" type="button" onclick="window.open('index.html','_self');">Home</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised" type="button" onclick="window.open('admin.html','_self');">Admin Console</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised" type="button" onclick="userLogout();">Log Out</button>
+      </div>
+      <div id="uploadres">
+        <center>
+        <h3>Upload Result</h3>
+        <select class="mdl-textfield__input" id="clas" name="class" onchange="loadForm()">
+          <option selected value="0">Select Class</option>
+          <option value="91">9th Orange</option>
+          <option value="92">9th White</option>
+          <option value="93">9th Green</option>
+          <option value="101">10th Orange</option>
+          <option value="102">10th White</option>
+          <option value="103">10th Green</option>
+          <option value="111">11th Orange</option>
+          <option value="112">11th White</option>
+          <option value="113">11th Green</option>
+          <option value="121">12th Orange</option>
+          <option value="122">12th White</option>
+          <option value="123">12th Green</option>
+        </select><br>
+        <select class="mdl-textfield__input" id="examopt" name="exam">
+          <option value="0">Select Exam</option>
+        </select>
+        <br/>
+        <select class="mdl-textfield__input" id="department" name="department">
+          <option value="0">You Teach</option>
+          <option value="101">Physics</option>
+          <option value="102">Chemistry</option>
+          <option value="103">Biology</option>
+          <option value="104">Maths</option>
+          <option value="105">English</option>
+          <option value="106">Computer</option>
+          <option value="107">Physical</option>
+          <option value="108">Science</option>
+          <option value="109">Hindi</option>
+          <option value="110">SSc</option>
+          <option value="111">Accountancy</option>
+          <option value="112">Business</option>
+          <option value="113">Economics</option>
+        </select><br>
+        <input class="mdl-textfield__input" type="text" id="maxmarks" placeholder="Maximum Marks"><br>
+        <div id="entryfields">
+        </div>
+        <br>
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="startbtn" name="start">Submit Result</button>
+        <br>
+      </center>
+      </div>
+    </div>
+  </body>
+</html>

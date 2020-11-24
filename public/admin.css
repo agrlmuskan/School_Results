@@ -1,0 +1,63 @@
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+#menu{
+  background-color:  #85c1e9  ;
+  text-align:center;
+}
+#menu ul{
+  list-style:none;
+}
+#menu ul li{
+  display: inline;
+}
+#menu ul li button:hover{
+  background-color:#0288D1;
+  color: white;
+}
+#arecont{
+  display: flex;
+}
+#arecont div{
+  width: 35%;
+  margin-left: 3%;
+  text-align: center;
+  padding:5%;
+  background-color:#AFEEEE;
+}
+#prcont{
+  width:90%;margin-left:1%;text-align:center;padding:1%;background-color:#AFEEEE;
+}
+#aucdcont{
+  width:30%;text-align:center;padding:2%;background-color:#AFEEEE;
+}
+#ausdcont{
+  width:70%;text-align:center;padding:2%;background-color:#AFEEEE;
+}
+#addtcont{
+  width:30%;text-align:center;padding:2%;background-color:#AFEEEE;
+}
+#logcont{
+  width:70%;text-align:center;padding:2%;background-color:#AFEEEE;
+}
+#modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+                url('loading.gif')
+                50% 50%
+                no-repeat;
+}
+body.loading {
+    overflow: hidden;
+}
+body.loading .modal {
+    display: block;
+}
